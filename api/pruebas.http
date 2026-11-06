@@ -1,0 +1,41 @@
+### Registro correcto
+POST http://localhost:8080/api/vehiculos
+Content-Type: application/json
+
+{
+  "id": 10,
+  "marca": "Toyota",
+  "modelo": "Corolla",
+  "anio": 2024,
+  "precio": 150000,
+  "color": "Blanco"
+}
+
+### Precio negativo
+POST http://localhost:8080/api/vehiculos
+Content-Type: application/json
+
+{
+  "marca": "Honda",
+  "modelo": "Civic",
+  "anio": 2022,
+  "precio": -5,
+  "color": "Gris"
+}
+
+### Falta la marca
+POST http://localhost:8080/api/vehiculos
+Content-Type: application/json
+
+{
+  "modelo": "Sentra",
+  "anio": 2020,
+  "precio": 98000,
+  "color": "Negro"
+}
+
+### JSON mal formado
+POST http://localhost:8080/api/vehiculos
+Content-Type: application/json
+
+{ "marca": "Mazda", "anio": "dos mil" }
