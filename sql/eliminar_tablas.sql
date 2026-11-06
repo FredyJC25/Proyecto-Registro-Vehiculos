@@ -1,0 +1,2 @@
+DROP TABLE bitacora PURGE;
+DROP TABLE vehiculo PURGE;
